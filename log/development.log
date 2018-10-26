@@ -229,3 +229,126 @@ Completed 200 OK in 419ms (Views: 401.1ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 134.29.63.163 at 2018-10-24 19:43:21 +0000
 Cannot render console from 134.29.63.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 134.29.63.38 at 2018-10-24 19:50:10 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 19:50:10 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 315ms (Views: 293.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 134.29.63.38 at 2018-10-24 19:50:11 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 134.29.63.38 at 2018-10-24 19:50:11 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 134.29.63.38 at 2018-10-24 19:50:11 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 134.29.63.38 at 2018-10-24 19:50:11 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 134.29.63.38 at 2018-10-24 19:50:11 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 19:53:56 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-dc24ae69b317edda0c2641410aa6042c99b13db3b0c0f72f9fd1df807ff73090.css?body=1" for 134.29.63.38 at 2018-10-24 19:53:56 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 20:10:21 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 20:11:50 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c0d68cfc708cb51a110c565c4c47399d4ff819748adb17669c353aaf4e04438a.css?body=1" for 134.29.63.38 at 2018-10-24 20:11:50 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 20:12:48 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a731827c8f8f3474a9a9df3f6f60289157b534b390049e0c275b017becbb3053.css?body=1" for 134.29.63.38 at 2018-10-24 20:12:48 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 20:13:41 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b17a5d9c2bf6dfc88a0dd51049e49506a402551dcd92f35378d51c950dd792ae.css?body=1" for 134.29.63.38 at 2018-10-24 20:13:41 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 20:17:41 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-7fe3a672261abeab303bb504dca143d5f9c07749fc693cb69c8c3303beab9a8b.css?body=1" for 134.29.63.38 at 2018-10-24 20:17:41 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 20:17:55 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-565eb03ffae8760ac1864c9108906348ef5f49293d5d9c158ecb47468857c829.css?body=1" for 134.29.63.38 at 2018-10-24 20:17:55 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 20:25:09 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1c2bed931528df28233c754411197ed0b9eb0b262282d044c03dc56d81994d69.css?body=1" for 134.29.63.38 at 2018-10-24 20:25:09 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.38 at 2018-10-24 20:51:07 +0000
+Cannot render console from 134.29.63.38! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  Rendered employees/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 161ms (Views: 147.7ms | ActiveRecord: 0.0ms)
