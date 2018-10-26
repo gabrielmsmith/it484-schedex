@@ -1,1 +1,20 @@
 %h1 Welcome
+
+%table#employees
+    %thead
+        %tr
+            %th First Name
+            %th Last Name
+            %th Address
+            %th Phone Number
+            %th Emp Type
+            %th DOB
+        %tbody
+            -   @employees.each do |emp|
+                %tr
+                    %td= emp.first_name
+                    %td= emp.last_name
+                    %td= emp.address
+                    %td= emp.phone_number
+                    %td= emp.employee_type
+                    %td= emp.dob

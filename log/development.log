@@ -229,3 +229,275 @@ Completed 200 OK in 419ms (Views: 401.1ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 134.29.63.163 at 2018-10-24 19:43:21 +0000
 Cannot render console from 134.29.63.163! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 134.29.63.39 at 2018-10-26 19:16:53 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:16:53 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (37.0ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `emp_type' for #<Employee:0x00000003977680>
+Did you mean?  employee_type):
+    16:                     %td= emp.last_name
+    17:                     %td= emp.address
+    18:                     %td= emp.phone_number
+    19:                     %td= emp.emp_type
+    20:                     %td= emp.dob.strftime("%d-%m-%y")
+  app/views/employees/index.html.haml:19:in `block in _app_views_employees_index_html_haml__238150741629614676_21120120'
+  app/views/employees/index.html.haml:13:in `_app_views_employees_index_html_haml__238150741629614676_21120120'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.4ms)
+
+
+Started GET "/" for 134.29.63.39 at 2018-10-26 19:18:05 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:18:05 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 373ms (Views: 350.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 134.29.63.39 at 2018-10-26 19:18:06 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 134.29.63.39 at 2018-10-26 19:18:06 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 134.29.63.39 at 2018-10-26 19:18:06 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 134.29.63.39 at 2018-10-26 19:18:06 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 134.29.63.39 at 2018-10-26 19:18:06 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:19:08 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.haml within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `emp_type' for #<Employee:0x007f738011bdb8>
+Did you mean?  employee_type):
+    16:                     %td= emp.last_name
+    17:                     %td= emp.address
+    18:                     %td= emp.phone_number
+    19:                     %td= emp.emp_type
+    20:                     %td= emp.dob.strftime("%d-%m-%y")
+  app/views/employees/index.html.haml:19:in `block in _app_views_employees_index_html_haml__2599227194041711708_70067067962960'
+  app/views/employees/index.html.haml:13:in `_app_views_employees_index_html_haml__2599227194041711708_70067067962960'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 134.29.63.39 at 2018-10-26 19:21:57 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:21:57 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (23.4ms)
+Completed 200 OK in 309ms (Views: 288.8ms | ActiveRecord: 0.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Beernink"], ["first_name", "Nick"], ["phone_number", "712-209-3355"], ["employee_type", "Driver"], ["driver_id", "805FJ897Y"]]
+  [1m[35m (15.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)  [["address", "123 Street"], ["last_name", "Smith"], ["first_name", "Gabriel"], ["phone_number", "507-559-9848"], ["employee_type", "Manager"], ["driver_id", ""]]
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id", "dob") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Ardolf"], ["first_name", "Garret"], ["phone_number", "507-454-8925"], ["employee_type", "In Shop"], ["driver_id", ""], ["dob", "1994-12-09 00:00:00.000000"]]
+  [1m[35m (11.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id", "dob") VALUES (?, ?, ?, ?, ?, ?, ?)  [["address", "123 Street"], ["last_name", "Klein"], ["first_name", "Jeremy"], ["phone_number", "507-898-5264"], ["employee_type", "Driver"], ["driver_id", "956LK993P"], ["dob", "1996-02-01 00:00:00.000000"]]
+  [1m[36m (12.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Colstrom"], ["first_name", "Josh"], ["phone_number", "507-951-9634"], ["employee_type", "In Shop"], ["driver_id", ""]]
+  [1m[35m (13.8ms)[0m  commit transaction
+
+
+Started GET "/" for 134.29.63.39 at 2018-10-26 19:38:29 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:38:29 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    17:                     %td= emp.address
+    18:                     %td= emp.phone_number
+    19:                     %td= emp.employee_type
+    20:                     %td= emp.dob.strftime("%d-%m-%y")
+  app/views/employees/index.html.haml:20:in `block in _app_views_employees_index_html_haml___4091966419197001322_34087320'
+  app/views/employees/index.html.haml:13:in `_app_views_employees_index_html_haml___4091966419197001322_34087320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.0ms)
+
+
+Started GET "/" for 134.29.63.39 at 2018-10-26 19:39:38 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:39:39 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (24.3ms)
+Completed 200 OK in 320ms (Views: 298.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 134.29.63.39 at 2018-10-26 19:41:15 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:41:15 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (28.0ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    17:                     %td= emp.address
+    18:                     %td= emp.phone_number
+    19:                     %td= emp.employee_type
+    20:                     %td= emp.dob.strftime("%B %d, %Y")
+  app/views/employees/index.html.haml:20:in `block in _app_views_employees_index_html_haml___2068956127560065477_25754740'
+  app/views/employees/index.html.haml:13:in `_app_views_employees_index_html_haml___2068956127560065477_25754740'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.3ms)
+
+
+Started GET "/" for 134.29.63.39 at 2018-10-26 19:41:48 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:41:49 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (28.9ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    17:                     %td= emp.address
+    18:                     %td= emp.phone_number
+    19:                     %td= emp.employee_type
+    20:                     %td= emp.dob.strftime("%B %d, %Y")
+  app/views/employees/index.html.haml:20:in `block in _app_views_employees_index_html_haml___2735109775475226953_29119700'
+  app/views/employees/index.html.haml:13:in `_app_views_employees_index_html_haml___2735109775475226953_29119700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.8ms)
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:41:58 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 290ms (Views: 289.2ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Beernink"], ["first_name", "Nick"], ["phone_number", "712-209-3355"], ["employee_type", "Driver"], ["driver_id", "805FJ897Y"]]
+  [1m[35m (10.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)  [["address", "123 Street"], ["last_name", "Smith"], ["first_name", "Gabriel"], ["phone_number", "507-559-9848"], ["employee_type", "Manager"], ["driver_id", ""]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id", "dob") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Ardolf"], ["first_name", "Garret"], ["phone_number", "507-454-8925"], ["employee_type", "In Shop"], ["driver_id", ""], ["dob", "1994-12-09 00:00:00.000000"]]
+  [1m[35m (13.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id", "dob") VALUES (?, ?, ?, ?, ?, ?, ?)  [["address", "123 Street"], ["last_name", "Klein"], ["first_name", "Jeremy"], ["phone_number", "507-898-5264"], ["employee_type", "Driver"], ["driver_id", "956LK993P"], ["dob", "1996-02-01 00:00:00.000000"]]
+  [1m[36m (13.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Colstrom"], ["first_name", "Josh"], ["phone_number", "507-951-9634"], ["employee_type", "In Shop"], ["driver_id", ""]]
+  [1m[35m (14.5ms)[0m  commit transaction
+  [1m[36mEmployee Load (0.5ms)[0m  [1mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEmployee Load (0.3ms)[0m  SELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "employees" WHERE "employees"."id" = ?  [["id", 1]]
+  [1m[36m (12.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Beernink"], ["first_name", "Nick"], ["phone_number", "712-209-3355"], ["employee_type", "Driver"], ["driver_id", "805FJ897Y"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)  [["address", "123 Street"], ["last_name", "Smith"], ["first_name", "Gabriel"], ["phone_number", "507-559-9848"], ["employee_type", "Manager"], ["driver_id", ""]]
+  [1m[36m (13.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id", "dob") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Ardolf"], ["first_name", "Garret"], ["phone_number", "507-454-8925"], ["employee_type", "In Shop"], ["driver_id", ""], ["dob", "1994-12-09 00:00:00.000000"]]
+  [1m[35m (12.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id", "dob") VALUES (?, ?, ?, ?, ?, ?, ?)  [["address", "123 Street"], ["last_name", "Klein"], ["first_name", "Jeremy"], ["phone_number", "507-898-5264"], ["employee_type", "Driver"], ["driver_id", "956LK993P"], ["dob", "1996-02-01 00:00:00.000000"]]
+  [1m[36m (13.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "employees" ("address", "last_name", "first_name", "phone_number", "employee_type", "driver_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "123 Street"], ["last_name", "Colstrom"], ["first_name", "Josh"], ["phone_number", "507-951-9634"], ["employee_type", "In Shop"], ["driver_id", ""]]
+  [1m[35m (12.6ms)[0m  commit transaction
+
+
+Started GET "/" for 134.29.63.39 at 2018-10-26 19:45:25 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 134.29.63.39 at 2018-10-26 19:45:26 +0000
+Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.4ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (24.3ms)
+Completed 200 OK in 293ms (Views: 272.6ms | ActiveRecord: 0.9ms)
