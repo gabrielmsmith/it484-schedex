@@ -11,3 +11,15 @@ html {
     margin: auto;
     width: 34%;
 }
+#employees {
+  margin: 10px;
+  border-collapse: collapse;
+  width: 60%;
+  border-bottom: 2px solid black;
+}
+#employees th {
+  border: 2px solid white;
+  font-weight: bold;
+  color: white;
+  background-color: #1166EF;
+}
