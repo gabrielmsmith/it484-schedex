@@ -1,5 +1,8 @@
-.title_home {
+html {
     font-family: "Arial", sans-serif;
+}
+
+.title_home {
     font-size: xx-large;
     text-align: center;
     margin-top: 15%;

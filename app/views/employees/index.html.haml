@@ -1,10 +1,10 @@
-#homepage
-    .title_home
-        %h1 SchedEx
-    .signin_info
-        %form
-            = label :user, :email, "Email"
-            = text_field :user, :email
-            = label :user, :password
-            = password_field :user, :password
-            %input{:type => "submit", :value => "Sign in"}
+#header
+    .top_bar
+        .logo
+            %h1 SchedEx
+        .email_signed_in
+            %h3= "joshcollstrom@mnsu.edu"
+    .header_navigation
+        %h3= "Home"
+        %h3= "Schedule"
+        %h3= "Employee List"
