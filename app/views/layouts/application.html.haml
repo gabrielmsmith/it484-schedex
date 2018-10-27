@@ -7,18 +7,17 @@
         = csrf_meta_tags
     
     %body
+        #header
+        .top_bar
+            .logo
+                %h1 SchedEx
+            .email_signed_in
+                %h3= "joshcollstrom@mnsu.edu"
+        .header_navigation
+            %h3= "Home"
+            %h3= "Schedule"
+            %h3= "Employee List"
         #notice.message= flash[:notice]
         #warning.message= flash[:warning]
         #main
-            = yield
-            
-#header
-    .top_bar
-        .logo
-            %h1 SchedEx
-        .email_signed_in
-            %h3= "joshcollstrom@mnsu.edu"
-    .header_navigation
-        %h3= "Home"
-        %h3= "Schedule"
-        %h3= "Employee List"
+        = yield
