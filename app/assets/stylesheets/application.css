@@ -100,6 +100,23 @@ li.dropdown {
   display: block;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #323e48;
+}
+
+.foot > .footer {
+  display: block;
+  color: #818b98;
+  padding-right: 2%;
+  text-align: right;
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
+}
+
 #employees {
   top: 15%;
   left:20%;
