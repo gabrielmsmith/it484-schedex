@@ -644,3 +644,16 @@ Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/application.self-f8d61f4dc4852004d69cb1c83387b2978724dab1149386337dd2be746bb4467e.css?body=1" for 134.29.63.39 at 2018-10-26 19:37:18 +0000
 Cannot render console from 134.29.63.39! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 68.115.98.40 at 2018-10-31 10:20:15 +0000
+Cannot render console from 68.115.98.40! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/employees" for 68.115.98.40 at 2018-10-31 10:20:16 +0000
+Cannot render console from 68.115.98.40! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EmployeesController#index as HTML
+  [1m[35mEmployee Load (0.6ms)[0m  SELECT "employees".* FROM "employees"
+  Rendered employees/index.html.haml within layouts/application (34.7ms)
+Completed 200 OK in 358ms (Views: 332.6ms | ActiveRecord: 1.4ms)
