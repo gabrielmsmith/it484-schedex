@@ -1,23 +1,47 @@
-!!! 5
+!!!
 %html
-    %head
-        %title SchedEx
-        = stylesheet_link_tag 'application'
-        = javascript_include_tag 'application'
-        = csrf_meta_tags
-    
-    %body
-        #header
-        .top_bar
-            .logo
-                %h1 SchedEx
-            .email_signed_in
-                %h3= "joshcollstrom@mnsu.edu"
-        .header_navigation
-            %h3= "Home"
-            %h3= "Schedule"
-            %h3= "Employee List"
-        #notice.message= flash[:notice]
-        #warning.message= flash[:warning]
-        #main
-        = yield
+  %head
+    %title SchedEx
+    = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %navbar
+      %ul.navbar-right
+        %right-content
+          %li.nav.dropdown.notifications
+            %a.dropbtn{"data-toggle" => "dropdown_notifications", href: "#"}
+              Notifications
+              %span.caret
+            %ul.dropdown-content{:role => "menu"}
+              %li
+                %a{:href => "#"} Garret Ardolf requests to change shifts.
+              %li
+                %a{:href => "#"} Josh Collstrom approved shift change.
+              %li
+                %a{:href => "#"} Nick Beernick requests to trade shifts with Jeremy Klein.
+              %li
+                %a{:href => "#"} Garret Ardolf denied your shift request.
+          %li.nav.dropdown.user
+            %a.dropbtn{"data-toggle" => "dropdown_user", href: "#"}
+              gabrielsmith@hotmail.com
+              %span.caret
+            %ul.dropdown-content{:role => "menu"}
+              %li
+                %a{:href => "#"} Profile
+              %li
+                %a{:href => "#"} Logout
+      %ul.navbar-left
+        %li.brand
+          %a{:href => "#"} SchedEx
+        %li.nav.active
+          %a{:href => "#"} Home
+        %li.nav
+          %a{:href => "#"} Schedule
+        %li.nav
+          %a{:href => "#"} Employees
+    #main
+      #notice.message= flash[:notice]
+      #warning.message= flash[:warning]
+      
+      = yield
