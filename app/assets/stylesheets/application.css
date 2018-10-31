@@ -115,3 +115,21 @@ li.dropdown {
   color: white;
   background-color: #1166EF;
 }
+
+
+.AddNew_Title{
+  font-size: 55px;
+  text-align: center;
+}
+
+form label{
+  text-align: center;
+  margin-left: 15px;
+  display: block;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.AddNew_Form{
+  text-align: center;
+}

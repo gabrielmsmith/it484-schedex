@@ -1,0 +1,30 @@
+.AddNew_Title Add New Employee
+
+.AddNew_Form
+
+    = form_tag employees_path, :method => :post do
+    
+        = label :employee, :first_name, 'First Name'
+        = text_field :employee, :first_name
+        
+        = label :employee, :last_name, 'Last Name'
+        = text_field :employee, :last_name
+        
+        = label :employee, :address, 'Address'
+        = text_field :employee, :address
+        
+        = label :employee, :phone_number, 'Phone Number'
+        = text_field :employee, :phone_number
+        
+        = label :employee, :employee_type, 'Employee Type'
+        = text_field :employee, :employee_type
+        
+        = label :employee, :driver_id, 'Driver ID Number'
+        = text_field :employee, :driver_id
+        
+        = label :employee, :dob, 'Date of Birth'
+        = date_select :employee, :dob, {start_year: 100.years.ago.year, end_year: Date.today.year, default: Date.today}
+        
+        
+        %div
+        = submit_tag 'Save Changes'
