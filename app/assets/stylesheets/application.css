@@ -208,3 +208,23 @@ footer {
 }
 
 /***************END EMPLOYEE INDEX***************/
+/***************START ADD EMPLOYEE PAGE***************/
+
+.AddNew_Title{
+  font-size: 55px;
+  text-align: center;
+}
+
+form label{
+  text-align: center;
+  margin-left: 15px;
+  display: block;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.AddNew_Form{
+  text-align: center;
+}
+
+/***************END ADD EMPLOYEE PAGE***************/
