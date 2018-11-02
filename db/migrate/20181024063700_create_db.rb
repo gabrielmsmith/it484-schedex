@@ -18,7 +18,7 @@ class CreateDb < ActiveRecord::Migration
     end
     
     create_table :shifts do |t|
-      t.string 'emp_id'
+      t.references 'emp_id'
       
       # If shift is on Monday, Tuesday, etc
       t.string 'day'
@@ -32,13 +32,13 @@ class CreateDb < ActiveRecord::Migration
     
     create_table :requests do |t|
       # The employee making the request
-      t.string 'emp_sender_id'
+      t.references 'emp_sender_id'
       
       # The employee receiving the request
-      t.string 'emp_receiver_id'
+      t.references 'emp_receiver_id'
       
       # The shift in question
-      t.string 'shift_id'
+      t.references 'shift_id'
       
       t.text 'comment'
     end
