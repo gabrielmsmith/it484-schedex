@@ -150,3 +150,8 @@ form label{
 .AddNew_Form{
   text-align: center;
 }
+
+input[type=text], textarea{
+  width: 15%;
+}
+
