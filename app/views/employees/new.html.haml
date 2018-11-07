@@ -11,13 +11,10 @@
         = text_field :employee, :last_name
         
         = label :employee, :address, 'Address'
-        = text_field :employee, :address
+        = text_area :employee, :address, :rows => '5'
         
         = label :employee, :phone_number, 'Phone Number'
-        = text_field :employee, :phone_number
-        
-        = label :employee, :employee_type, 'Employee Type'
-        = text_field :employee, :employee_type
+        = text_field :employee, :phone_number, placeholder: '999-999-9999'
         
         = label :employee, :driver_id, 'Driver ID Number'
         = text_field :employee, :driver_id
@@ -25,6 +22,15 @@
         = label :employee, :dob, 'Date of Birth'
         = date_select :employee, :dob, {start_year: 100.years.ago.year, end_year: Date.today.year, default: Date.today}
         
+        = label :employee, :employee_type, 'Employee Type'
+        = select :employee, :employee_type, ['InShop', 'Driver', 'Manager']
+    
+        %p
+        %p
+
+    = form_tag employees_path, :method => :get do
+        = submit_tag 'Cancel Changes'
         
-        %div
         = submit_tag 'Save Changes'
+        
+        
