@@ -138,6 +138,51 @@ footer {
   text-align: right;
 }
 
+/*flash_container {*/
+/*    align-items: center;*/
+/*    right: 0;*/
+/*    bottom: 2rem;*/
+/*    left: 0;*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*    flex-direction: column-reverse;*/
+/*    position: fixed;*/
+/*    width: 100%;*/
+    /*pointer-events: none;*/
+/*    z-index: 100;*/
+/*    padding: .75rem;*/
+/*}*/
+
+/*.flash-message {*/
+/*    background: rgba(0, 0, 0, 0.88);*/
+/*    border-radius: 3px;*/
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+/*    color: #ffffff;*/
+/*    cursor: default;*/
+/*    display: flex;*/
+/*    max-width: 400px;*/
+    /*pointer-events: auto;*/
+/*    position: relative;*/
+/*    font-weight: 400;*/
+/*    line-height: 1.25;*/
+/*}*/
+
+#notice {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
 /***************END APPLICATION***************/
 /***************START EMPLOYEE INDEX***************/
 
@@ -208,3 +253,20 @@ footer {
 }
 
 /***************END EMPLOYEE INDEX***************/
+
+.AddNew_Title{
+  font-size: 55px;
+  text-align: center;
+}
+
+form label{
+  text-align: center;
+  margin-left: 15px;
+  display: block;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.AddNew_Form{
+  text-align: center;
+}
