@@ -227,4 +227,6 @@ form label{
   text-align: center;
 }
 
-/***************END ADD EMPLOYEE PAGE***************/
+input[type=text], textarea{
+  width: 15%;
+}
