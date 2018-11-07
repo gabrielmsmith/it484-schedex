@@ -2,7 +2,8 @@
     %employee_actions
         %ul.emp_actions
             %li.emp
-                %a{:href => "#"} Add Employee
+                %a{:href => new_employee_path} Add New Employee
+
     %table
         %thead
             %tr
@@ -22,5 +23,3 @@
                         %td= emp.employee_type
                         %td= emp.dob
                         %td= link_to 'Delete', employee_path(emp), :method => :delete
-                        
-= link_to 'Add new Employee', new_employee_path
