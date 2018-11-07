@@ -5,7 +5,7 @@
     = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
+  %topnavbar
     %navbar
       %ul.navbar-right
         %right-content
@@ -35,15 +35,16 @@
         %li.brand
           %a{:href => "#"} SchedEx
         %li.nav.active
-          %a{:href => "#"} Home
+          %a{:href => "/"} Home
         %li.nav
           %a{:href => "#"} Schedule
         %li.nav
-          %a{:href => "#"} Employees
+          %a{:href => "/employees"} Employees 
     #main
       #notice.message= flash[:notice]
       #warning.message= flash[:warning]
-      
+     
+    %body 
       = yield
       
     %footer

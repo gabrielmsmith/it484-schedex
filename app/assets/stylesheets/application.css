@@ -2,11 +2,18 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
+  height: 100%;
   margin: 0;
 }
 
-ul {
+/*topnavbar {*/
+/*  min-height: 100%;*/
+/*}*/
+
+navbar > ul {
   list-style-type: none;
+  height: 50px;
+  font-size: 15px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -21,6 +28,7 @@ ul {
 .navbar-left > .active > a:hover {
   background-color: #21282f;
   color: white;
+  height: 100%;
 }
 
 .navbar-right {
@@ -31,7 +39,7 @@ ul {
   float: right;
 }
 
-li a, .dropbtn {
+.navbar-left > li a, .dropbtn {
   display: inline-block;
   color: #818b98;
   text-align: center;
@@ -39,9 +47,10 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-.brand > a {
+.navbar-left > .brand > a {
   font-weight: bold;
   color: white;
+  font-size: 22px;
 }
 
 .brand a:hover {
@@ -60,6 +69,10 @@ li a, .dropbtn {
   border-left: 4px solid transparent;
 }
 
+li.nav {
+  padding-top: 3px;
+}
+
 li.nav a:hover,
 li.nav a:focus,
 .dropdown:hover .dropbtn {
@@ -73,6 +86,9 @@ li.dropdown {
 }
 
 .dropdown-content {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -101,30 +117,38 @@ li.dropdown {
 }
 
 footer {
-  position: fixed;
-  left: 0;
+  position: absolute;
+  /*right: 0;*/
+  /*left: 0;*/
   bottom: 0;
   width: 100%;
   background-color: #323e48;
+  /*padding: 0;*/
+  /*padding-top: 1%;*/
+  padding-bottom: .75%;
+  margin: 0;
+  height: 35px;
 }
 
 .foot > .footer {
-  display: block;
   color: #818b98;
+  /*padding-top: -10px;*/
+  /*padding-bottom: 2%;*/
   padding-right: 2%;
   text-align: right;
-  margin-bottom: 0.5%;
-  margin-top: 0.5%;
 }
 
-#employees {
+/***************END APPLICATION***************/
+/***************START EMPLOYEE INDEX***************/
+
+#employees table{
   top: 15%;
-  left:20%;
-  margin: 10px;
+  /*left:20%;*/
+  /*margin: 10px;*/
   border-collapse: collapse;
-  width: 60%;
+  width: 100%;
   border-bottom: 2px solid black;
-  position: fixed;
+  position: relative;
 }
 #employees th {
   border: 2px solid white;
@@ -133,6 +157,58 @@ footer {
   background-color: #1166EF;
 }
 
+#employee employee_actions {
+  /*margin-top: 20%;*/
+  width: 100%;
+  /*height: 25%;*/
+  background-size: 100% 100%;
+  background-color: #E8E8E8;
+}
+
+#employees .emp_action > li a {
+  /*list-style-type: none;*/
+  display: inline-block;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#employees .emp_actions {
+  /*float: left;*/
+  /*height: 25%;*/
+  list-style-type: none;
+  text-decoration: none;
+  /*margin-top: 5%;*/
+  margin: 0;
+  /*margin-bottom: 50%;*/
+  /*padding: 0;*/
+  overflow: hidden;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #E8E8E8;
+}
+
+#employees .emp_actions > li{
+  /*list-style-type: none;*/
+  text-decoration: none;
+  float: left;
+}
+
+#employees .emp {
+  margin-left: 5%;
+  /*color: gray;*/
+}
+
+#employees .emp a:hover {
+  color: white;
+  background-color: #323e48;
+  /*list-style-type: none;*/
+  text-decoration: none;
+}
+
+/***************END EMPLOYEE INDEX***************/
+/***************START ADD EMPLOYEE PAGE***************/
 
 .AddNew_Title{
   font-size: 55px;
@@ -154,4 +230,3 @@ form label{
 input[type=text], textarea{
   width: 15%;
 }
-
