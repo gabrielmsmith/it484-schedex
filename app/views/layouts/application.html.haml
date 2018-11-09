@@ -24,13 +24,15 @@
                 %a{:href => "#"} Garret Ardolf denied your shift request.
           %li.nav.dropdown.user
             %a.dropbtn{"data-toggle" => "dropdown_user", href: "#"}
-              gabrielsmith@hotmail.com
+              - if @current_user
+                Welcome, #{@current_user.name}
               %span.caret
             %ul.dropdown-content{:role => "menu"}
               %li
                 %a{:href => "#"} Profile
               %li
-                %a{:href => "#"} Logout
+                - if @current_user
+                  = link_to 'Logout', logout_path, :method => :post
       %ul.navbar-left
         %li.brand
           %a{:href => "#"} SchedEx
@@ -40,12 +42,13 @@
           %a{:href => "#"} Schedule
         %li.nav
           %a{:href => "#"} Employees
-    %flash_container
-      #notice.message= flash[:notice]
-      #warning.message= flash[:warning]
-     
+
     %body 
       = yield
+      
+      %flash_container
+        = flash[:notice]
+        = flash[:warning]
       
     %footer
       %container.foot
