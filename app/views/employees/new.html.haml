@@ -1,36 +1,42 @@
-.AddNew_Title Add New Employee
+.NewEmployeePage
 
-.AddNew_Form
-
-    = form_tag employees_path, :method => :post do
+    .AddNew_Title Add New Employee
     
-        = label :employee, :first_name, 'First Name'
-        = text_field :employee, :first_name
-        
-        = label :employee, :last_name, 'Last Name'
-        = text_field :employee, :last_name
-        
-        = label :employee, :address, 'Address'
-        = text_area :employee, :address, :rows => '5'
-        
-        = label :employee, :phone_number, 'Phone Number'
-        = text_field :employee, :phone_number, placeholder: '999-999-9999'
-        
-        = label :employee, :driver_id, 'Driver ID Number'
-        = text_field :employee, :driver_id
-        
-        = label :employee, :dob, 'Date of Birth'
-        = date_select :employee, :dob, {start_year: 100.years.ago.year, end_year: Date.today.year, default: Date.today}
-        
-        = label :employee, :employee_type, 'Employee Type'
-        = select :employee, :employee_type, ['InShop', 'Driver', 'Manager']
+    .AddNew_Form
     
-        %p
-        %p
-
-    = form_tag employees_path, :method => :get do
-        = submit_tag 'Cancel Changes'
+        = form_tag employees_path, :method => :post do
         
-        = submit_tag 'Save Changes'
+            = label :employee, :first_name, 'First Name'
+            = text_field :employee, :first_name, :required => true, :pattern => '[A-Z, a-z]+'
+            
+            = label :employee, :last_name, 'Last Name'
+            = text_field :employee, :last_name, :required => true, :pattern => '[A-Z, a-z]+'
+            
+            = label :employee, :address, 'Address'
+            = text_area :employee, :address, :rows => '5'
+            
+            = label :employee, :phone_number, 'Phone Number'
+            = text_field :employee, :phone_number, placeholder: '999-999-9999', :required => true, :pattern => '[0-9]{3}-[0-9]{3}-[0-9]{4}'
+            
+            = label :employee, :driver_id, 'Driver ID Number'
+            = text_field :employee, :driver_id
+        
+            .EmpType
+                = label :employee, :employee_type, 'Employee Type'
+                = select :employee, :employee_type, ['InShop', 'Driver', 'Manager']
+            
+            .DateOfBirth
+                = label :employee, :dob, 'Date of Birth'
+                = date_select :employee, :dob, {start_year: 100.years.ago.year, end_year: Date.today.year, default: Date.today}
+        
+            
+            
+            .SaveChanges
+                = submit_tag 'Save Changes'
+    
+        = form_tag employees_path, :method => :get do
+            .CancelChanges
+                = submit_tag 'Cancel Changes'
+            
         
         

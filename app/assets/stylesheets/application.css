@@ -2,18 +2,11 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
-  height: 100%;
   margin: 0;
 }
 
-/*topnavbar {*/
-/*  min-height: 100%;*/
-/*}*/
-
-navbar > ul {
+ul {
   list-style-type: none;
-  height: 50px;
-  font-size: 15px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -28,7 +21,6 @@ navbar > ul {
 .navbar-left > .active > a:hover {
   background-color: #21282f;
   color: white;
-  height: 100%;
 }
 
 .navbar-right {
@@ -39,7 +31,7 @@ navbar > ul {
   float: right;
 }
 
-.navbar-left > li a, .dropbtn {
+li a, .dropbtn {
   display: inline-block;
   color: #818b98;
   text-align: center;
@@ -47,10 +39,9 @@ navbar > ul {
   text-decoration: none;
 }
 
-.navbar-left > .brand > a {
+.brand > a {
   font-weight: bold;
   color: white;
-  font-size: 22px;
 }
 
 .brand a:hover {
@@ -69,10 +60,6 @@ navbar > ul {
   border-left: 4px solid transparent;
 }
 
-li.nav {
-  padding-top: 3px;
-}
-
 li.nav a:hover,
 li.nav a:focus,
 .dropdown:hover .dropbtn {
@@ -86,9 +73,6 @@ li.dropdown {
 }
 
 .dropdown-content {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -255,26 +239,70 @@ flash_container {
   text-decoration: none;
 }
 
+
+
 /***************END EMPLOYEE INDEX***************/
 /***************START ADD EMPLOYEE PAGE***************/
 
-.AddNew_Title{
-  font-size: 55px;
-  text-align: center;
+.NewEmployeePage{
+  margin-top: 3%;
+  width: 20%;
+  border: 2px solid black;
+  background-color: #BEBEBE;
+  margin: 2% auto;
+  padding-top: 6px;
+  padding-bottom: 3%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
-form label{
+.AddNew_Title{
+  font-size: 2.5em;
   text-align: center;
-  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+form label, .EmpType label, .DateOfBirth label{
+  margin-left: 15%;
+  text-align: left;
   display: block;
   line-height: 30px;
   font-weight: bold;
 }
 
 .AddNew_Form{
-  text-align: center;
+  text-align: left;
 }
 
-input[type=text], textarea{
-  width: 15%;
+input[type=text], textarea, .EmpType select{
+  margin-left: 15%;
+  width: 70%;
+}
+
+.DateOfBirth{
+  margin-left: 15%;
+}
+
+.DateOfBirth label{
+  margin-left: 0%;
+}
+
+.DateOfBirth select{
+  width: 26.5%;
+}
+
+.SaveChanges{
+  float: right;
+  margin-right: 20%;
+  margin-top: 20px;
+}
+
+.CancelChanges{
+  float: left;
+  margin-left: 20%;
+  margin-top: 20px;
+}
+
+.AddEmployeeButtons{
+  width: 20%;
 }
