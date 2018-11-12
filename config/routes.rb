@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  get 'home/index'
+
   get 'schedule/index'
 
   get 'home/index'
