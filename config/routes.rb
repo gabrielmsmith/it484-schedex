@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
+
   get 'schedule/index'
 
   get 'home/index'
-
-  get 'home/schedule'
-
-  get 'home/employees'
   
   get 'signin' => 'sessions#index'
 
