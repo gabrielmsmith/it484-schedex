@@ -1,0 +1,18 @@
+%requests_body#requests
+
+    %table
+        %thead
+            %tr
+                %th Day
+                %th Time
+                %th Shift Type
+                %th Comment
+            %tbody
+                -   @employees.each do |emp|
+                    - emp.shifts.each do |s|
+                        %tr
+                            %td= s.day
+                            %td= s.time
+                            %td= s.shift_type
+                            %td= s.comment
+                            %td= link_to 'Delete', request_path(req), :method => :delete
