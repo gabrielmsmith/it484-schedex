@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181109040051) do
+ActiveRecord::Schema.define(version: 20181114014722) do
 
   create_table "employees", force: :cascade do |t|
     t.string   "address"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20181109040051) do
     t.string   "employee_type"
     t.string   "driver_id"
     t.datetime "dob"
+    t.string   "uid"
   end
 
   create_table "requests", force: :cascade do |t|
