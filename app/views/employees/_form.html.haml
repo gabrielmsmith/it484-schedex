@@ -1,0 +1,35 @@
+= form_tag employees_path, :method => :post do
+
+    = label :employee, :first_name, 'First Name'
+    = text_field :employee, :first_name, :required => true, :pattern => '[A-Z, a-z]+'
+    
+    = label :employee, :last_name, 'Last Name'
+    = text_field :employee, :last_name, :required => true, :pattern => '[A-Z, a-z]+'
+    
+    = label :employee, :address, 'Address'
+    = text_area :employee, :address, :rows => '5'
+    
+    = label :employee, :phone_number, 'Phone Number'
+    = text_field :employee, :phone_number, placeholder: '999-999-9999', :required => true, :pattern => '[0-9]{3}-[0-9]{3}-[0-9]{4}'
+    
+    = label :employee, :driver_id, 'Driver ID Number'
+    = text_field :employee, :driver_id
+
+    .EmpType
+        = label :employee, :employee_type, 'Employee Type'
+        - if Employee.find_by(:uid => session[:user_id]).employee_type == "Manager"
+            = select :employee, :employee_type, ['InShop', 'Driver', 'Manager']
+        - else
+            = select :employee, :employee_type, ['InShop', 'Driver']
+    .DateOfBirth
+        = label :employee, :dob, 'Date of Birth'
+        = date_select :employee, :dob, {start_year: 100.years.ago.year, end_year: Date.today.year, default: Date.today}
+
+    
+    
+    .SaveChanges
+        = submit_tag 'Save Changes'
+
+= form_tag employees_path, :method => :get do
+    .CancelChanges
+        = submit_tag 'Cancel Changes'
