@@ -4,7 +4,7 @@
             %li.emp
                 - if Employee.find_by(:uid => session[:user_id]).employee_type == 'Manager'
                     %a{:href => new_employee_path} Add New Employee
-
+                %a{:href => new_request_path} Create Shift Request
     %table
         %thead
             %tr
