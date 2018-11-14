@@ -17,7 +17,7 @@
 
     .EmpType
         = label :employee, :employee_type, 'Employee Type'
-        - if Employee.find_by(:uid => session[:user_id]).employee_type == "Manager"
+        - if Employee.find_by(:uid => session[:user_id]) and Employee.find_by(:uid => session[:user_id]).employee_type == "Manager"
             = select :employee, :employee_type, ['InShop', 'Driver', 'Manager']
         - else
             = select :employee, :employee_type, ['InShop', 'Driver']
