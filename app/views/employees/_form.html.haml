@@ -1,19 +1,14 @@
 = form_tag employees_path, :method => :post do
 
-    = label :employee, :first_name, 'First Name'
-    = text_field :employee, :first_name, :required => true, :pattern => '[A-Z, a-z]+'
+    = text_field :employee, :first_name, :required => true, :pattern => '[A-Z, a-z]+', placeholder: 'First Name'
     
-    = label :employee, :last_name, 'Last Name'
-    = text_field :employee, :last_name, :required => true, :pattern => '[A-Z, a-z]+'
+    = text_field :employee, :last_name, :required => true, :pattern => '[A-Z, a-z]+', placeholder: 'Last Name'
     
-    = label :employee, :address, 'Address'
-    = text_area :employee, :address, :rows => '5'
+    = text_area :employee, :address, :rows => '5', placeholder: 'Address'
     
-    = label :employee, :phone_number, 'Phone Number'
-    = text_field :employee, :phone_number, placeholder: '999-999-9999', :required => true, :pattern => '[0-9]{3}-[0-9]{3}-[0-9]{4}'
+    = text_field :employee, :phone_number, placeholder: 'Phone Number: 999-999-9999', :required => true, :pattern => '[0-9]{3}-[0-9]{3}-[0-9]{4}'
     
-    = label :employee, :driver_id, 'Driver ID Number'
-    = text_field :employee, :driver_id
+    = text_field :employee, :driver_id, placeholder: 'Driver ID Number'
 
     .EmpType
         = label :employee, :employee_type, 'Employee Type'
