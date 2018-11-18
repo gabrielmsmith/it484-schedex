@@ -1,25 +1,7 @@
-.NewRequestPage
-
-    .AddNew_Title Request Shift Exchange
-
+.NewRequestsPage
+    
+    .AddNew_Title Create New Request
+    
     .AddNew_Form
-
-        = form_tag requests_path, :method => :post do
-        
-            = label :request, :emp_receiver_id, 'Employee to request'
-            = select :request, :emp_receiver_id, @employees.map {|e| [e.first_name + ' ' + e.last_name, ] }
-            //= text_field :request, :emp_receiver_id
-        
-            = label :request, :shift_id, 'Shift to request'
-            = select :request, :shift_id, @shifts.map {|s| [s.day + ' ' + s.time + ' ' + s.shift_type]}
-        
-            = label :request, :comment, 'Comment'
-            = text_field :request, :comment
-        
-            %p
-            %p
-
-        = form_tag requests_path, :method => :get do
-            = submit_tag 'Cancel Changes'
-        
-            = submit_tag 'Create Request'
+    
+        = render :partial => 'form'
