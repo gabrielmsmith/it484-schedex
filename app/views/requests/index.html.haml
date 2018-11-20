@@ -3,16 +3,15 @@
     %table
         %thead
             %tr
-                %th Day
-                %th Time
-                %th Shift Type
+                %th Emp Sender Id
+                %th Emp Receiver Id
+                %th Shift Id
                 %th Comment
             %tbody
-                -   @employees.each do |emp|
-                    - emp.shifts.each do |s|
-                        %tr
-                            %td= s.day
-                            %td= s.time
-                            %td= s.shift_type
-                            %td= s.comment
-                            %td= link_to 'Delete', request_path(req), :method => :delete
+                -   @requests.each do |r|
+                    %tr
+                        %td= r.emp_sender_id
+                        %td= r.emp_receiver_id
+                        %td= r.shift_id
+                        %td= r.comment
+                        %td= link_to 'Delete', request_path(r), :method => :delete
