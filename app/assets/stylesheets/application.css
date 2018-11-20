@@ -159,12 +159,6 @@ footer {
   width: 100%;
 }
 
-#employees .emp_action > li a {
-  display: inline-block;
-  text-align: center;
-  padding: 14px 16px;
-}
-
 #employees .emp_actions {
   margin: 0;
   overflow: hidden;
@@ -173,7 +167,8 @@ footer {
   background-color: #eaeaea;
 }
 
-#employees .emp_actions > li{
+#employees .emp_actions > li a{
+  display: inline-block;
   text-decoration: none;
   float: left;
 }
@@ -183,6 +178,7 @@ footer {
 }
 
 #employees .emp a {
+  margin-left: 2%;
   font-size: 9pt;
   color: white;
   background-color: #59a8b8;
@@ -191,7 +187,24 @@ footer {
   text-decoration: none;
 }
 
+#employees .option {
+  margin-left: 15px;
+  margin-top: 7px;
+  text-align: center;
+  display: inline-block;
+  height: 20px;
+  width: 80px;
+  font-size: 10pt;
+  color: white;
+  background-color: #7a3b5c;
+  border-radius: 15px;
+  text-decoration: none;
+}
 
+#employees .option > p{
+  display: inline-block;
+  margin-top: 2.75px;
+}
 
 /***************END EMPLOYEE INDEX***************/
 /***************START ADD EMPLOYEE PAGE***************/

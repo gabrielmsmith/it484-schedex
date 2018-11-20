@@ -2,8 +2,7 @@
     %employee_actions
         %ul.emp_actions
             %li.emp
-                - if Employee.find_by(:uid => session[:user_id]).employee_type == 'Manager'
-                    %a{:href => new_employee_path} NEW EMPLOYEE
+                %a{:href => new_employee_path} NEW EMPLOYEE
                 %a{:href => new_request_path} REQUEST SHIFT
     %table
         %tr
@@ -13,8 +12,7 @@
             %th PHONE NUMBER
             %th EMPLOYEE TYPE
             %th DATE OF BIRTH
-            - if Employee.find_by(:uid => session[:user_id]).employee_type == 'Manager'
-                %th Options
+            %th
             %th
         %tbody
             -   @employees.each do |emp|
@@ -25,9 +23,12 @@
                     %td= emp.phone_number
                     %td= emp.employee_type
                     %td= emp.dob
-                    %td
-                        - if Employee.find_by(:uid => session[:user_id]).employee_type == 'Manager'
-                            - if emp.uid != session[:user_id].to_s 
-                                = link_to 'Delete', employee_path(emp), :method => :delete
-                            - else
-                                Delete
+                    %td.option{:href => "#"}
+                        %p Edit
+                    %td.option{:href => "#"}
+                        %p Delete
+
+                            
+// = link_to 'Delete', employee_path(emp), :method => :delete
+
+// {:href => "employee_path(emp), :method => :delete"}
