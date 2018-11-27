@@ -25,9 +25,15 @@
                         %td= emp.phone_number
                         %td= emp.employee_type
                         %td= emp.dob
-                        %td
+                        %td 
                             - if Employee.find_by(:uid => session[:user_id]).employee_type == 'Manager'
                                 - if emp.uid != session[:user_id].to_s 
                                     = link_to 'Delete', employee_path(emp), :method => :delete
+                                    
+                                    = link_to 'Edit', edit_employee_path(emp)
                                 - else
-                                    Delete
+                                    = link_to 'Edit', edit_employee_path(emp)
+                            - else
+                                = link_to 'Edit', edit_employee_path(emp)
+                            
+                                    

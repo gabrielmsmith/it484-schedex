@@ -12,6 +12,21 @@ class EmployeesController < ApplicationController
         @employee = Employee.new
     end
     
+    def edit
+        id = params[:id]
+        @employee = Employee.find(id)
+    end
+    
+    def update
+        @employee = Employee.find params[:id]
+        params.require(:employee)
+        permitted = params[:employee].permit(:address, :last_name, :first_name, :phone_number, :employee_type, :driver_id, :dob)
+        @employee.update_attributes!(permitted)
+        flash[:notice] = "#{@employee.first_name} was successfully updated."
+        redirect_to employees_path
+    end
+    
+    
     def create
         params.require(:employee)
         permitted = params[:employee].permit(:address, :last_name, :first_name, :phone_number, :employee_type, :driver_id, :dob)
