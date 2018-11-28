@@ -5,36 +5,30 @@
                 %a{:href => new_employee_path} NEW EMPLOYEE
                 %a{:href => new_request_path} REQUEST SHIFT
     %table
-        %thead
-            %tr
-                %th First Name
-                %th Last Name
-                %th Address
-                %th Phone Number
-                %th Emp Type
-                %th DOB
-                - if Employee.find_by(:uid => session[:user_id]).employee_type == 'Manager'
-                    %th Options
-            %tbody
-                -   @employees.each do |emp|
-                    %tr
-                        %td= emp.first_name
-                        %td= emp.last_name
-                        %td= emp.address
-                        %td= emp.phone_number
-                        %td= emp.employee_type
-                        %td= emp.dob
-                        %td 
-                            - if Employee.find_by(:uid => session[:user_id]).employee_type == 'Manager'
-                                - if emp.uid != session[:user_id].to_s 
-                                    = link_to 'Delete', employee_path(emp), :method => :delete
-                                    
-                                    = link_to 'Edit', edit_employee_path(emp)
-                                - else
-                                    = link_to 'Edit', edit_employee_path(emp)
-                            - else
-                                = link_to 'Edit', edit_employee_path(emp)
-                               
+        %tr
+            %th FIRST NAME
+            %th LAST NAME
+            %th ADDRESS
+            %th PHONE NUMBER
+            %th EMPLOYEE TYPE
+            %th DATE OF BIRTH
+            %th
+            %th
+        %tbody
+            -   @employees.each do |emp|
+                %tr.row_info
+                    %td= emp.first_name
+                    %td= emp.last_name
+                    %td= emp.address
+                    %td= emp.phone_number
+                    %td= emp.employee_type
+                    %td= emp.dob
+                    %td.option{:href => "#"}
+                        %p Edit
+                    %td.option{:href => "#"}
+                        %p Delete
+
+                            
 // = link_to 'Delete', employee_path(emp), :method => :delete
 
 // {:href => "employee_path(emp), :method => :delete"}
