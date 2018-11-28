@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get  'auth/facebook', :as => 'login'
 
   resources :employees
+  resources :shifts
   #root :to => redirect('/employees')
   
   resources :requests
