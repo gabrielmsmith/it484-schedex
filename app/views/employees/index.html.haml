@@ -2,9 +2,8 @@
     %employee_actions
         %ul.emp_actions
             %li.emp
-                - if Employee.find_by(:uid => session[:user_id]).employee_type == 'Manager'
-                    %a{:href => new_employee_path} Add New Employee
-                %a{:href => new_request_path} Create Shift Request
+                %a{:href => new_employee_path} NEW EMPLOYEE
+                %a{:href => new_request_path} REQUEST SHIFT
     %table
         %thead
             %tr
@@ -35,5 +34,7 @@
                                     = link_to 'Edit', edit_employee_path(emp)
                             - else
                                 = link_to 'Edit', edit_employee_path(emp)
-                            
-                                    
+                               
+// = link_to 'Delete', employee_path(emp), :method => :delete
+
+// {:href => "employee_path(emp), :method => :delete"}

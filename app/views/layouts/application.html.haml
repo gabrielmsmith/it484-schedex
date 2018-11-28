@@ -6,7 +6,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %topnavbar
-    %navbar
+    %navbar{ :style => "color: #ffbfb2;" }
       %ul.navbar-right
         %right-content
           %li.nav.dropdown.notifications
@@ -15,13 +15,13 @@
               %span.caret
             %ul.dropdown-content{:role => "menu"}
               %li
-                %a{:href => "#"} Garret Ardolf requests to change shifts.
+                %a{:href => requests_path} Garret Ardolf requests to change shifts.
               %li
-                %a{:href => "#"} Josh Collstrom approved shift change.
+                %a{:href => requests_path} Josh Collstrom approved shift change.
               %li
-                %a{:href => "#"} Nick Beernick requests to trade shifts with Jeremy Klein.
+                %a{:href => requests_path} Nick Beernick requests to trade shifts with Jeremy Klein.
               %li
-                %a{:href => "#"} Garret Ardolf denied your shift request.
+                %a{:href => requests_path} Garret Ardolf denied your shift request.
           %li.nav.dropdown.user
             %a.dropbtn{"data-toggle" => "dropdown_user", href: "#"}
               - if @current_user
@@ -36,7 +36,7 @@
       %ul.navbar-left
         %li.brand
           %a{:href => "/home/index"} SchedEx
-        %li.nav.active
+        %li.nav
           %a{:href => "/home/index"} Home
         %li.nav
           %a{:href => "/schedule/index"} Schedule
@@ -49,7 +49,7 @@
       %flash_container
         = flash[:notice]
         = flash[:warning]
-      
+-#
     %footer
       %container.foot
         %p.footer SchedEx
