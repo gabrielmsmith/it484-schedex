@@ -14,6 +14,7 @@
             %th DATE OF BIRTH
             %th
             %th
+            
         %tbody
             -   @employees.each do |emp|
                 %tr.row_info
@@ -23,12 +24,7 @@
                     %td= emp.phone_number
                     %td= emp.employee_type
                     %td= emp.dob
-                    %td.option{:href => "#"}
-                        %p Edit
-                    %td.option{:href => "#"}
-                        %p Delete
+                    %td= link_to 'Edit', edit_employee_path(emp), class: 'Link-Edit'
+                    %td= link_to 'Delete', employee_path(emp), :method => :delete, class: 'Link-Delete'
 
                             
-// = link_to 'Delete', employee_path(emp), :method => :delete
-
-// {:href => "employee_path(emp), :method => :delete"}
