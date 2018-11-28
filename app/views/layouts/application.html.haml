@@ -6,7 +6,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %topnavbar
-    %navbar
+    %navbar{ :style => "color: #ffbfb2;" }
       %ul.navbar-right
         %right-content
           %li.nav.dropdown.notifications
@@ -36,7 +36,7 @@
       %ul.navbar-left
         %li.brand
           %a{:href => "/home/index"} SchedEx
-        %li.nav.active
+        %li.nav
           %a{:href => "/home/index"} Home
         %li.nav
           %a{:href => "/schedule/index"} Schedule
@@ -49,7 +49,7 @@
       %flash_container
         = flash[:notice]
         = flash[:warning]
-      
+-#
     %footer
       %container.foot
         %p.footer SchedEx
