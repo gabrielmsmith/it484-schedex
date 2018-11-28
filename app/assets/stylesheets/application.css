@@ -212,13 +212,14 @@ footer {
 .NewEmployeePage{
   margin-top: 3%;
   width: 20%;
-  /*border: 2px solid black;*/
-  background-color: #D8D8D8;
+  /*border: 2px solid black;    #D8D8D8   */
+  background-color: #59a8b8;
   margin: 2% auto;
   padding-top: 6px;
   padding-bottom: 4%;
   padding-left: 1%;
   padding-right: 1%;
+  border-radius: 25px;
 }
 
 .AddNew_Title{
@@ -226,7 +227,7 @@ footer {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 15px;
-  color: #323e48;
+  color: white;
 }
 
 .EmpType{
@@ -234,7 +235,7 @@ footer {
 }
 
  .EmpType label, .DateOfBirth label{
-  color: #323e48;
+  color: white;
   margin-left: 14%;
   text-align: left;
   display: block;
@@ -301,14 +302,59 @@ textarea{
   width: 120px;
   height: 32px;
   color: white;
-  background-color: #323e48;
+  background-color: #552d42;
   text-decoration: none;
   border: none;
   text-align: center;
   margin: 0px 2px;
+  border-radius: 25px;
 }
 .Save:hover, .Cancel:hover{
-  background-color: #272b2d;
+  background-color: #442434;
+}
+
+.Link{
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  margin-top: 7px;
+  text-align: center;
+  display: inline-block;
+  height: 10px;
+  width: 80px;
+  font-size: 10pt;
+  background-color: #7a3b5c;
+  border-radius: 15px;
+}
+.Link-Edit{
+  float: right;
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  margin-top: 7px;
+  text-align: center;
+  display: inline-block;
+  height: 20px;
+  width: 80px;
+  font-size: 10pt;
+  background-color: #7a3b5c;
+  border-radius: 15px;
+  padding-top: 3px;
+}
+.Link-Delete{
+  float: left;
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  margin-top: 7px;
+  text-align: center;
+  display: inline-block;
+  height: 20px;
+  width: 80px;
+  font-size: 10pt;
+  background-color: #7a3b5c;
+  border-radius: 15px;
+  padding-top: 3px;
 }
 
 
