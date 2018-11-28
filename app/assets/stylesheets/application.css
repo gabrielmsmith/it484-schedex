@@ -212,11 +212,11 @@ footer {
 .NewEmployeePage{
   margin-top: 3%;
   width: 20%;
-  border: 2px solid black;
-  background-color: #BEBEBE;
+  /*border: 2px solid black;*/
+  background-color: #D8D8D8;
   margin: 2% auto;
   padding-top: 6px;
-  padding-bottom: 3%;
+  padding-bottom: 4%;
   padding-left: 1%;
   padding-right: 1%;
 }
@@ -224,28 +224,52 @@ footer {
 .AddNew_Title{
   font-size: 2.5em;
   text-align: center;
+  margin-top: 10px;
   margin-bottom: 15px;
+  color: #323e48;
 }
 
-form label, .EmpType label, .DateOfBirth label{
-  margin-left: 15%;
+.EmpType{
+  margin-top: 15px;
+}
+
+ .EmpType label, .DateOfBirth label{
+  color: #323e48;
+  margin-left: 14%;
   text-align: left;
   display: block;
   line-height: 30px;
   font-weight: bold;
+  margin-top: 8px;
 }
 
 .AddNew_Form{
   text-align: left;
 }
 
-input[type=text], textarea, .EmpType select{
-  margin-left: 15%;
-  width: 70%;
+input[type=text]{
+  margin-left: 14%;
+  width: 275px;
+  height: 26px;
+  margin-top: 16px;
+}
+
+.EmpType select{
+  margin-left: 14%;
+  height: 26px;
+  width: 280px;
+}
+
+textarea{
+  margin-left: 14%;
+  width: 273px;
+  margin-top: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: -4px;
 }
 
 .DateOfBirth{
-  margin-left: 15%;
+  margin-left: 14%;
 }
 
 .DateOfBirth label{
@@ -253,21 +277,36 @@ input[type=text], textarea, .EmpType select{
 }
 
 .DateOfBirth select{
-  width: 26.5%;
+  width: 91px;
+  height: 26px;
 }
 
 .SaveChanges{
   float: right;
-  margin-right: 20%;
+  margin-right: 15.75%;
   margin-top: 20px;
 }
 
 .CancelChanges{
   float: left;
-  margin-left: 20%;
+  margin-left: 17.75%;
   margin-top: 20px;
 }
 
 .AddEmployeeButtons{
   width: 20%;
 }
+
+.Save, .Cancel{
+  width: 120px;
+  height: 32px;
+  color: white;
+  background-color: #323e48;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  margin: 0px 2px;
+}
+.Save:hover, .Cancel:hover{
+  background-color: #272b2d;
+} 

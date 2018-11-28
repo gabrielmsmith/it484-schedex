@@ -1,12 +1,13 @@
 .NewEmployeePage
     
-    .AddNew_Title Add New Employee
+    .AddNew_Title Edit Employee
     
     .AddNew_Form
-        = form_tag employees_path, :method => :post do
+        = form_tag employee_path(@employee), :method => :put do
             = render :partial => 'form'
         = form_tag employees_path, :method => :get do
             .CancelChanges
                 = submit_tag 'Cancel Changes', class: 'Cancel'
-                
+            
+        
         
