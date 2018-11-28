@@ -1,0 +1,16 @@
+.NewEmployeePage
+    
+    .AddNew_Title Edit Shift
+    
+    .EmpType
+        = form_tag shift_path(@shift), :method => :put do
+            = label :shift, :emp_id, 'Employee to Assign'
+            - employeesAvailable = Shift.get_employees_available(@shift.day, @shift.time)
+            = select :shift, :emp_id, employeesAvailable.map {|e| [e.first_name + ' ' + e.last_name, e.id]} + [0]
+        
+            .SaveChanges
+                = submit_tag 'Save Changes', class: 'Save'
+
+        = form_tag shifts_path, :method => :get do
+            .CancelChanges
+                = submit_tag 'Cancel Changes', class: 'Cancel'
