@@ -3,5 +3,8 @@
     .AddNew_Title Create New Request
     
     .AddNew_Form
-    
-        = render :partial => 'form'
+        = form_tag requests_path, :method => :post do
+            = render :partial => 'form'
+        = form_tag requests_path, :method => :get do
+            .CancelChanges
+                = submit_tag 'Cancel Changes', class: 'Cancel'

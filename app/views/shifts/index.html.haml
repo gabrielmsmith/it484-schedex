@@ -15,19 +15,19 @@
                 %tr
                     %td Manager
                     -   Shift.get_shifts("Manager","Lunch").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                 %tr
                     %td In-Store 1
                     -   Shift.get_shifts("In_1","Lunch").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                 %tr
                     %td In-Store 2
                     -   Shift.get_shifts("In_2","Lunch").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                 %tr
                     %td Driver
                     -   Shift.get_shifts("Driver_1","Lunch").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                         
                 %tr#gap
                     %td
@@ -42,24 +42,30 @@
                 %tr
                     %td Manager
                     -   Shift.get_shifts("Manager","Dinner").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                 %tr
                     %td In-Store 1
                     -   Shift.get_shifts("In_1","Dinner").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                 %tr
                     %td In-Store 2
                     -   Shift.get_shifts("In_2","Dinner").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                 %tr
                     %td In-Store 3
                     -   Shift.get_shifts("In_3","Dinner").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                 %tr
                     %td Driver 1
                     -   Shift.get_shifts("Driver_1","Dinner").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
                 %tr
                     %td Driver 2
                     -   Shift.get_shifts("Driver_2","Dinner").each do |shift|
-                        %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift)
+                        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift)
+%employee_foot#foot
+    %br
+    %br
+    %br
+    %br
+    %a{:href => new_request_path} CREATE REQUEST

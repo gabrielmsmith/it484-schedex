@@ -12,6 +12,12 @@ class Shift < ActiveRecord::Base
         return shifts
     end
     
+    def self.get_details(id)
+        if Shift.find_by_id(id)
+            return Shift.find_by_id(id).shift_type + ': ' + Shift.find_by_id(id).day + ' ' + Shift.find_by_id(id).time
+        end
+    end
+    
     def self.get_employee_name(id)
         if Employee.find_by_id(id)
             return Employee.find_by_id(id).first_name + ' ' + Employee.find_by_id(id).last_name
