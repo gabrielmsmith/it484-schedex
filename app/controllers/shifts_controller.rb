@@ -14,7 +14,7 @@ class ShiftsController < ApplicationController
     params.require(:shift)
     permitted = params[:shift].permit(:emp_id)
     @shift.update_attributes!(permitted)
-    flash[:notice] = "#{Shift.get_employee_name(@shift.emp_id)} was assigned the shift."
+    flash[:warning] = "#{Shift.get_employee_name(@shift.emp_id)} was assigned the shift."
     redirect_to shifts_path
   end
 end

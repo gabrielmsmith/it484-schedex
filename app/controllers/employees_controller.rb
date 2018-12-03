@@ -22,7 +22,7 @@ class EmployeesController < ApplicationController
         params.require(:employee)
         permitted = params[:employee].permit(:address, :last_name, :first_name, :phone_number, :employee_type, :driver_id, :dob)
         @employee.update_attributes!(permitted)
-        flash[:notice] = "#{@employee.first_name} was successfully updated."
+        flash[:success] = "#{@employee.first_name} was successfully updated."
         redirect_to employees_path
     end
     
@@ -34,7 +34,7 @@ class EmployeesController < ApplicationController
         if ! Employee.find_by(:uid => session[:user_id]) # Handling new account creation
             @employee.update_attributes(:uid => session[:user_id])
         end
-        flash[:notice] = "#{@employee.first_name} was successfully created."
+        flash[:success] = "#{@employee.first_name} was successfully created."
         redirect_to employees_path
     end
     
@@ -45,7 +45,7 @@ class EmployeesController < ApplicationController
     def destroy
         @employee = Employee.find(params[:id])
         @employee.destroy
-        flash[:notice] = "#{@employee.first_name} has been deleted"
+        flash[:warning] = "#{@employee.first_name} has been deleted"
         redirect_to employees_path
     end
 end

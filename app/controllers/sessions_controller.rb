@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     
     if Employee.find_by(:uid => user.id)
       redirect_to employees_path
+      flash[:success] = 'You have signed in!'
     else
       redirect_to new_employee_path
     end
@@ -16,7 +17,7 @@ class SessionsController < ApplicationController
   end
   def destroy
     session.delete(:user_id)
-    flash[:notice] = 'Logged out successfully.'
+    flash[:warning] = 'Logged out successfully.'
     redirect_to employees_path
   end
   
