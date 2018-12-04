@@ -434,6 +434,19 @@ textarea{
   margin-top: 2.75px;
 }
 
+.Link-Shift{
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  text-align: center;
+  display: inline-block;
+  height: 22px;
+  width: 150px;
+  font-size: 10pt;
+  background-color: #59a8b8;
+  border-radius: 3px;
+  padding-top: 4px;
+}
 #foot a {
   margin-left: 5%;
   font-size: 15pt;
