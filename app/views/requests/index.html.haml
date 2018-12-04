@@ -1,17 +1,38 @@
 %requests_body#requests
-
+    %br
+    %br
+    
+    %string#title Sent Requests
     %table
         %thead
             %tr
-                %th Emp Sender Id
-                %th Emp Receiver Id
-                %th Shift Id
+                %th Sent To
+                %th Shift
                 %th Comment
             %tbody
-                -   @requests.each do |r|
+                -   @sentRequests.each do |r|
                     %tr
-                        %td= r.emp_sender_id
-                        %td= r.emp_receiver_id
-                        %td= r.shift_id
-                        %td= r.comment
-                        %td= link_to 'Delete', request_path(r), :method => :delete
+                        - if Request.find_by_id(r.shift_id)
+                            %td= Employee.get_name(r.emp_receiver_id)
+                            %td= Shift.get_details(r.shift_id)
+                            %td= r.comment
+                            %td= link_to 'Delete', request_path(r), :method => :delete
+    -   5.times do
+        %br
+        
+    %string#title Received Requests                 
+    %table
+        %thead
+            %tr
+                %th From
+                %th Shift
+                %th Comment
+            %tbody
+                -   @receivedRequests.each do |r|
+                    %tr
+                        - if Request.find_by_id(r.shift_id)
+                            %td= Employee.get_name(r.emp_sender_id)
+                            %td= Shift.get_details(r.shift_id)
+                            %td= r.comment
+                            %td= link_to 'Accept', shift_path(Shift.find_by_id(r.shift_id)), :method => :put
+                            %td= link_to 'Decline', request_path(r), :method => :delete
