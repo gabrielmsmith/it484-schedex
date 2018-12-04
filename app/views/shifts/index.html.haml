@@ -63,3 +63,9 @@
                     %td Driver 2
                     -   Shift.get_shifts("Driver_2","Dinner").each do |shift|
                         %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+%employee_foot#foot
+    %br
+    %br
+    %br
+    %br
+    %a{:href => new_request_path} CREATE REQUEST

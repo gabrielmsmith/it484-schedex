@@ -415,16 +415,6 @@ textarea{
   margin-left: 5%;
 }
 
-#shifts .emp a {
-  margin-left: 2%;
-  font-size: 9pt;
-  color: white;
-  background-color: #59a8b8;
-  border-radius: 15px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 #shifts .option {
   margin-left: 15px;
   margin-top: 7px;
@@ -456,4 +446,39 @@ textarea{
   background-color: #59a8b8;
   border-radius: 3px;
   padding-top: 4px;
+}
+#foot a {
+  margin-left: 5%;
+  font-size: 15pt;
+  color: white;
+  background-color: #59a8b8;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/****************END SCHEDULE INDEX PAGE*************/
+/****************START REQUESTS INDEX PAGE***********/
+#requests table{
+  text-align: center;
+  border-collapse: collapse;
+  width: 70%;
+  position: relative;
+}
+#requests th {
+  font-size: 11pt;
+  font-weight: bold;
+  color: white;
+  background-color: #552d42;
+  height: 50px;
+}
+
+#requests td {
+  font-size: 13px;
+  height: 25px;
+}
+
+#requests #title {
+  font-size: large;
+  font-weight: bold;
 }

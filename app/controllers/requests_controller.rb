@@ -1,13 +1,15 @@
 class RequestsController < ApplicationController
     def index
         @employee = Employee.where(:uid => session[:user_id])
-        @requests = Request.where(:emp_receiver_id => @employee.ids[0])
+        @receivedRequests = Request.where(:emp_receiver_id => @employee.ids[0])
+        @sentRequests = Request.where(:emp_sender_id => @employee.ids[0])
     end
     
     def new
         @request = Request.new
         @employees = Employee.all
         @shifts = Shift.all
+        @shift = Shift.find_by_id(params[:shift_id])
     end
     
     def create
