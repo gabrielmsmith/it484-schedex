@@ -12,11 +12,10 @@
             %tbody
                 -   @sentRequests.each do |r|
                     %tr
-                        - if Request.find_by_id(r.shift_id)
-                            %td= Employee.get_name(r.emp_receiver_id)
-                            %td= Shift.get_details(r.shift_id)
-                            %td= r.comment
-                            %td= link_to 'Delete', request_path(r), :method => :delete
+                        %td= Employee.get_name(r.emp_receiver_id)
+                        %td= Shift.get_details(r.shift_id)
+                        %td= r.comment
+                        %td= link_to 'Delete', request_path(r), :method => :delete
     -   5.times do
         %br
         
@@ -30,9 +29,8 @@
             %tbody
                 -   @receivedRequests.each do |r|
                     %tr
-                        - if Request.find_by_id(r.shift_id)
-                            %td= Employee.get_name(r.emp_sender_id)
-                            %td= Shift.get_details(r.shift_id)
-                            %td= r.comment
-                            %td= link_to 'Accept', shift_path(Shift.find_by_id(r.shift_id)), :method => :put
-                            %td= link_to 'Decline', request_path(r), :method => :delete
+                        %td= Employee.get_name(r.emp_sender_id)
+                        %td= Shift.get_details(r.shift_id)
+                        %td= r.comment
+                        %td= link_to 'Accept', shift_path(Shift.find_by_id(r.shift_id)), :method => :put
+                        %td= link_to 'Decline', request_path(r), :method => :delete
