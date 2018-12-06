@@ -18,28 +18,28 @@
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                 %tr
                     %td In-Store 1
                     -   Shift.get_shifts("In_1","Lunch").each do |shift|
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                 %tr
                     %td In-Store 2
                     -   Shift.get_shifts("In_2","Lunch").each do |shift|
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                 %tr
                     %td Driver
                     -   Shift.get_shifts("Driver_1","Lunch").each do |shift|
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                         
                 %tr#gap
                     %td
@@ -57,39 +57,39 @@
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                 %tr
                     %td In-Store 1
                     -   Shift.get_shifts("In_1","Dinner").each do |shift|
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                 %tr
                     %td In-Store 2
                     -   Shift.get_shifts("In_2","Dinner").each do |shift|
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                 %tr
                     %td In-Store 3
                     -   Shift.get_shifts("In_3","Dinner").each do |shift|
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                 %tr
                     %td Driver 1
                     -   Shift.get_shifts("Driver_1","Dinner").each do |shift|
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
                 %tr
                     %td Driver 2
                     -   Shift.get_shifts("Driver_2","Dinner").each do |shift|
                         - if shift.emp_id == "0"
                             %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
                         - else
-                            %td= link_to Shift.get_employee_name(shift.emp_id), edit_shift_path(shift), class: 'Link-Shift'
+                            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'

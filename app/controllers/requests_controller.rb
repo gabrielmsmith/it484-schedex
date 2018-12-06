@@ -7,9 +7,9 @@ class RequestsController < ApplicationController
     
     def new
         @request = Request.new
-        @employees = Employee.all
-        @shifts = Shift.all
-        @shift = Shift.find_by_id(params[:shift_id])
+        @currentEmp = Employee.where(:uid => session[:user_id])
+        @employees = Employee.where.not(id: @currentEmp.ids[0])
+        @currentShift = Shift.find params[:format]
     end
     
     def create
