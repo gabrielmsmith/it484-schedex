@@ -5,7 +5,7 @@
     .EmpType
         = form_tag shift_path(@shift), :method => :put do
             = label :shift, :emp_id, 'Employee to Assign'
-            - employeesAvailable = Shift.get_employees_available(@shift.day, @shift.time)
+            - employeesAvailable = Shift.get_employees_available(@shift)
             = select :shift, :emp_id, employeesAvailable.map {|e| [e.first_name + ' ' + e.last_name, e.id]} + [0]
         
             .SaveChanges

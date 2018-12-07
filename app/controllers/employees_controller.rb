@@ -1,6 +1,7 @@
 class EmployeesController < ApplicationController
     def index
         @employees = Employee.all
+        @currentEmp = Employee.where(:uid => session[:user_id])
     end
    
     def show

@@ -26,13 +26,15 @@ class Shift < ActiveRecord::Base
         end
     end
     
-    def self.get_employees_available(day, time)
+    def self.get_employees_available(shift)
+        day = shift.day
+        time = shift.time
         employees = Array.new(0)
         Employee.all.each do |emp|
             available = true
-            Shift.all.each do |shift|
-                if shift.day.eql?(day) and shift.time.eql?(time)
-                    if shift.emp_id.eql?(emp.id.to_s())
+            Shift.all.each do |sft|
+                if sft.day.eql?(day) and sft.time.eql?(time)
+                    if sft.emp_id.eql?(emp.id.to_s())
                        available = false
                     end
                 end
@@ -44,4 +46,18 @@ class Shift < ActiveRecord::Base
         return employees
     end
     
+    def self.employee_available?(emp_id, shift)
+        available = true
+        shifts = Shift.where(:day => shift.day, :time => shift.time)
+        shifts.each do |sft|
+            if sft.emp_id.eql?(emp_id.to_s())
+                available = false
+            end
+            if !sft.employee_type.eql?(Employee.find_by(emp_id).employee_type)
+                available = false
+            end
+            
+        end
+        return available
+    end
 end

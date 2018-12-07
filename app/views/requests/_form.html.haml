@@ -1,6 +1,7 @@
 -   if @currentShift.emp_id == @currentEmp.ids[0].to_s
     = label :request, :emp_receiver_id, 'Receiver'
-    = select :request, :emp_receiver_id, @employees.map {|e| [e.first_name + ' ' + e.last_name, e.id] }
+    - employeesAvailable = Shift.get_employees_available(@currentShift)
+    = select :request, :emp_receiver_id, employeesAvailable.map {|e| [e.first_name + ' ' + e.last_name, e.id] }
     
     .hdnShiftId
         = select :request, :shift_id, [@currentShift.id]

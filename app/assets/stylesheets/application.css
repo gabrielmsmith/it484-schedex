@@ -480,6 +480,32 @@ textarea{
   border-radius: 3px;
   padding-top: 4px;
 }
+.Link-Shift-Green{
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  text-align: center;
+  display: inline-block;
+  height: 22px;
+  width: 150px;
+  font-size: 10pt;
+  background-color: #1144FF;
+  border-radius: 3px;
+  padding-top: 4px;
+}
+.Link-Shift-Gray{
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  text-align: center;
+  display: inline-block;
+  height: 22px;
+  width: 150px;
+  font-size: 10pt;
+  background-color: #267585;
+  border-radius: 3px;
+  padding-top: 4px;
+}
 #foot a {
   margin-left: 5%;
   font-size: 15pt;

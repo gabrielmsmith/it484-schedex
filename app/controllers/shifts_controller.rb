@@ -1,6 +1,7 @@
 class ShiftsController < ApplicationController
   def index
     @shifts = Shift.all
+    @currentEmp = Employee.where(:uid => session[:user_id])
   end
   
   def edit
