@@ -26,22 +26,58 @@ class Shift < ActiveRecord::Base
         end
     end
     
-    def self.get_employees_available(day, time)
+    def self.get_employees_available(shift)
+        day = shift.day
+        time = shift.time
         employees = Array.new(0)
         Employee.all.each do |emp|
             available = true
-            Shift.all.each do |shift|
-                if shift.day.eql?(day) and shift.time.eql?(time)
-                    if shift.emp_id.eql?(emp.id.to_s())
+            Shift.all.each do |sft|
+                if sft.day.eql?(day) and sft.time.eql?(time)
+                    if sft.emp_id.eql?(emp.id.to_s())
                        available = false
                     end
                 end
             end
-            if available
+            if available and emp.employee_type[0].eql?(shift.shift_type[0]) 
                 employees.push(emp)
             end
         end
         return employees
     end
     
+    def self.employee_available?(emp_id, shift)
+        available = true
+        shifts = Shift.where(:day => shift.day, :time => shift.time)
+        shifts.each do |sft|
+            if sft.emp_id.eql?(emp_id.to_s())
+                available = false
+            end
+        end
+        return available
+    end
+    
+    def self.employee_qualified?(emp_id, shift)
+        return Employee.find_by_id(emp_id).employee_type.to_s()[0].eql?(shift.shift_type.to_s()[0])
+    end
+    
+    def self.clear_shifts(emp_id)
+        shifts = Shift.where(:emp_id => emp_id)
+        shifts.each do |sft|
+           sft.update_attributes(:emp_id => 0) 
+        end
+    end
+    
+    def self.get_my_shifts(emp_id, time)
+        shifts = Array.new(0)
+        allShifts = Shift.where(:emp_id => emp_id)
+        if allShifts
+            allShifts.each do |shift|
+                if shift.time.eql?(time)
+                   shifts.push(shift)
+                end
+            end
+        end
+        return shifts
+    end
 end

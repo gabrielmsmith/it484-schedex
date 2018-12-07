@@ -1,0 +1,16 @@
+// Schedule Index
+%employee_body#shifts
+    %table
+        %thead
+            %tr
+                %th My Shifts
+            %tbody
+                %tr
+                    %td Lunch
+                    -   Shift.get_my_shifts(@currentEmp.ids[0].to_s ,"Lunch").each do |shift|
+                        %td= link_to Shift.get_details(shift.id), new_request_path(shift), class: 'Link-Shift'
+                %tr
+                    %td Dinner
+                    -   Shift.get_my_shifts(@currentEmp.ids[0].to_s ,"Dinner").each do |shift|
+                        %td= link_to Shift.get_details(shift.id), new_request_path(shift), class: 'Link-Shift'
+                        
