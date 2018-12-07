@@ -12,8 +12,11 @@ Rails.application.routes.draw do
   post 'logout' => 'sessions#destroy'
   get  'auth/failure' => 'sessions#failure'
   get  'auth/facebook', :as => 'login'
+  
+  put 'shifts/:id/edit' => 'shifts#update'
 
   resources :employees
+  
   resources :shifts
   #root :to => redirect('/employees')
   

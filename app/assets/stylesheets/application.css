@@ -515,3 +515,14 @@ textarea{
   font-size: large;
   font-weight: bold;
 }
+
+/**************END REQUESTS INDEX PAGE****************/
+/**************START NEW REQUESTS PAGE****************/
+
+.hdnShiftId {
+  visibility: hidden;
+}
+
+.hdnEmpId {
+  visibility: hidden;
+}

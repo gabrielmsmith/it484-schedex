@@ -11,10 +11,10 @@ class ShiftsController < ApplicationController
   
   def update
     @shift = Shift.find params[:id]
-    params.require(:shift)
-    permitted = params[:shift].permit(:emp_id)
-    @shift.update_attributes!(permitted)
-    flash[:info] = "#{Shift.get_employee_name(@shift.emp_id)} was assigned the shift."
+    @employee = Employee.where(:uid => session[:user_id])
+    id = @employee.ids[0].to_s
+    @shift.update_attribute(:emp_id, id)
+    flash[:warning] = "#{Shift.get_employee_name(@shift.emp_id)} was assigned the shift."
     redirect_to shifts_path
   end
 end
