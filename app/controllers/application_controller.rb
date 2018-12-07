@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
     # we exploit the fact that the below query may return nil
     @current_user ||= User.find_by_id(session[:user_id])
     
+    @currentEmp = Employee.where(:uid => session[:user_id])
+    
     redirect_to signin_path and return unless @current_user
   end
   

@@ -1,10 +1,13 @@
 - if shift.emp_id == "0"
-    - if Shift.employee_available?(@currentEmp.ids[0].to_s, shift)
+    - if Shift.employee_available?(@currentEmp.ids[0].to_s, shift) and Shift.employee_qualified?(@currentEmp.ids[0].to_s, shift)
         %td= link_to Shift.get_employee_name(shift.emp_id), shift_path(shift), method: :put, :data => {:confirm => 'Take open shift?'}, class: 'Link-Shift'
     - else
-        %td= link_to Shift.get_employee_name(shift.emp_id), shifts_path, class: 'Link-Shift-Gray'
+        %td= link_to Shift.get_employee_name(shift.emp_id), shifts_path, :data => {:confirm => 'Cannot accept open shift. You are already scheduled during this time slot.'}, class: 'Link-Shift-Gray'
 - else
-    - if shift.emp_id != @currentEmp.ids[0].to_s
-        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
+    - if Shift.employee_qualified?(@currentEmp.ids[0].to_s, shift)
+        - if shift.emp_id != @currentEmp.ids[0].to_s
+            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift'
+        - else
+            %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift-Green'
     - else
-        %td= link_to Shift.get_employee_name(shift.emp_id), new_request_path(shift), class: 'Link-Shift-Green'
+        %td= link_to Shift.get_employee_name(shift.emp_id), shifts_path, class: 'Link-Shift-Gray'

@@ -20,9 +20,15 @@ class EmployeesController < ApplicationController
     
     def update
         @employee = Employee.find params[:id]
+        previousType = @employee.employee_type
         params.require(:employee)
         permitted = params[:employee].permit(:address, :last_name, :first_name, :phone_number, :employee_type, :driver_id, :dob)
         @employee.update_attributes!(permitted)
+        newType = @employee.employee_type
+        if previousType != newType
+            Shift.clear_shifts(@employee.id)
+            Request.clear_requests(@employee.id)
+        end
         flash[:success] = "#{@employee.first_name} was successfully updated."
         redirect_to employees_path
     end

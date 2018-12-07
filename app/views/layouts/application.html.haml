@@ -15,13 +15,8 @@
               %span.caret
             %ul.dropdown-content{:role => "menu"}
               %li
-                %a{:href => requests_path} Garret Ardolf requests to change shifts.
-              %li
-                %a{:href => requests_path} Josh Collstrom approved shift change.
-              %li
-                %a{:href => requests_path} Nick Beernick requests to trade shifts with Jeremy Klein.
-              %li
-                %a{:href => requests_path} Garret Ardolf denied your shift request.
+                %a{:href => requests_path} View All Requests
+
           %li.nav.dropdown.user
             %a.dropbtn{"data-toggle" => "dropdown_user", href: "#"}
               - if @current_user

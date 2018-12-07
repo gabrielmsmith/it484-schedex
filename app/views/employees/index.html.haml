@@ -26,5 +26,3 @@
                     %td= link_to 'Edit', edit_employee_path(emp), class: 'Link-Edit'
                     - if emp.id.to_s() != @currentEmp.ids[0].to_s and Employee.find(@currentEmp.ids[0]).employee_type == "Manager"
                         %td= link_to 'Delete', employee_path(emp), :method => :delete, class: 'Link-Delete'
-
-                            

@@ -39,7 +39,7 @@ class Shift < ActiveRecord::Base
                     end
                 end
             end
-            if available
+            if available and emp.employee_type[0].eql?(shift.shift_type[0]) 
                 employees.push(emp)
             end
         end
@@ -53,11 +53,31 @@ class Shift < ActiveRecord::Base
             if sft.emp_id.eql?(emp_id.to_s())
                 available = false
             end
-            if !sft.employee_type.eql?(Employee.find_by(emp_id).employee_type)
-                available = false
-            end
-            
         end
         return available
+    end
+    
+    def self.employee_qualified?(emp_id, shift)
+        return Employee.find_by_id(emp_id).employee_type.to_s()[0].eql?(shift.shift_type.to_s()[0])
+    end
+    
+    def self.clear_shifts(emp_id)
+        shifts = Shift.where(:emp_id => emp_id)
+        shifts.each do |sft|
+           sft.update_attributes(:emp_id => 0) 
+        end
+    end
+    
+    def self.get_my_shifts(emp_id, time)
+        shifts = Array.new(0)
+        allShifts = Shift.where(:emp_id => emp_id)
+        if allShifts
+            allShifts.each do |shift|
+                if shift.time.eql?(time)
+                   shifts.push(shift)
+                end
+            end
+        end
+        return shifts
     end
 end
