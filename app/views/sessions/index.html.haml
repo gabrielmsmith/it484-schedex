@@ -1,6 +1,7 @@
-#login
-    - if @current_user
-        %p.welcome  Welcome, #{@current_user.name}!
-        = link_to 'Log Out', logout_path, :method => :post
-    - else
-        %p.login= link_to 'Log in with your Facebook account', login_path
+#login{ :style => 'font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: white;' }
+    %body{ :style => 'background: #ea5a49; text-align: center; margin-top: 10%;'}
+        %h1.title{ :style => 'font-size: 200px;'} SchedEx
+        %p.login{ :style => 'font-size: 20px; margin-top: -70px; margin-left: 42%; padding-top: 15px; background: white; border-radius: 15px; width: 300px; height: 40px'}= link_to 'Log in with Facebook', login_path, class: 'link-login'
+        
+
+    
