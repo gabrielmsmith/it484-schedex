@@ -110,6 +110,39 @@ footer {
   text-align: right;
 }
 
+.flash_succss {
+  background: green;
+}
+
+.success {
+  color: white;
+
+}
+
+.flash_info {
+  background: gray;
+}
+
+.info {
+  color: blue;
+}
+
+.flash_warning {
+  background: yellow;
+}
+
+.warning {
+  color: black;
+}
+
+.flash_danger {
+  background: red;
+}
+
+.danger {
+  color: white;
+}
+
 #notice {
     visibility: hidden;
     min-width: 250px;

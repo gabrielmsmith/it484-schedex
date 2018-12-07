@@ -17,7 +17,7 @@ class RequestsController < ApplicationController
         permitted = params[:request].permit(:emp_receiver_id, :shift_id, :comment)
         @employee = Employee.where(:uid => session[:user_id])
         @request = Request.create!(permitted).update_columns(:emp_sender_id => @employee.ids[0])
-        flash[:notice] = "Shift request created successfully."
+        flash[:success] = "Shift request created successfully."
         redirect_to requests_path
     end
     
@@ -33,7 +33,7 @@ class RequestsController < ApplicationController
     def destroy
         @request = Request.find(params[:id])
         @request.destroy
-        flash[:notice] = "Request has been deleted"
+        flash[:info] = "Request has been deleted"
         redirect_to employees_path
     end
 end

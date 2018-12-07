@@ -44,27 +44,34 @@
           %a{:href => employees_path} Employees
 
     %body
-      
-      - if flash[:success]
-        .alert.alert-success.alert-dismissible{role: "alert"}
-          %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
-            %span{"aria-hidden" => "true"} ×
-          = flash[:success]
-      - elsif flash[:info]
-        .alert.alert-info.alert-dismissible{role: "alert"}
-          %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
-            %span{"aria-hidden" => "true"} ×
-          = flash[:info]
-      - elsif flash[:warning]
-        .alert.alert-warning.alert-dismissible{role: "alert"}
-          %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
-            %span{"aria-hidden" => "true"} ×
-          = flash[:warning]
-      - elsif flash[:danger]
-        .alert.alert-danger.alert-dismissible{role: "alert"}
-          %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
-            %span{"aria-hidden" => "true"} ×
-          = flash[:danger]
+      %div.flash_succss
+        %div.success
+          - if flash[:success]
+            .alert.alert-success.alert-dismissible{role: "alert"}
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+                %span{"aria-hidden" => "true"} ×
+              = flash[:success]
+      %div.flash_info        
+        %div.info      
+          - if flash[:info]
+            .alert.alert-info.alert-dismissible{role: "alert"}
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+                %span{"aria-hidden" => "true"} ×
+              = flash[:info]
+      %div.flash_warning        
+        %div.warning  
+          - if flash[:warning]
+            .alert.alert-warning.alert-dismissible{role: "alert"}
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+                %span{"aria-hidden" => "true"} ×
+              = flash[:warning]
+      %div.flash_danger        
+        %div.danger
+          - if flash[:danger]
+            .alert.alert-danger.alert-dismissible{role: "alert"}
+              %button.close{"aria-label" => "Close", "data-dismiss" => "alert", type: "button"}
+                %span{"aria-hidden" => "true"} ×
+              = flash[:danger]
       = yield
 -#
     %footer
